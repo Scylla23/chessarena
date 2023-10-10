@@ -1,0 +1,35 @@
+.cell {
+    text-align: center;
+    padding: 0.25rem 0.35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100vh * 0.9) / 9.5);
+    height: calc((100vh * 0.85) / 9.5);
+}
+
+.cell.check {
+    background: linear-gradient(102.2deg, rgb(250, 45, 66) 9.6%, rgb(245, 104, 104) 96.1%);
+}
+
+.light {
+    background-color: rgb(235, 228, 219);
+}
+.dark {
+    background-color: #b68f3a;
+}
+.highlight {
+    position:relative;
+    background-color: cornsilk;
+}
+.highlight:before {
+    content:'';
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    border-radius:50%;
+}

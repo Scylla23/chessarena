@@ -1,0 +1,126 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.theme-toast {
+  background: rgba(0,0,10,.8);
+  border-radius: 40px;
+  box-shadow: 1px 2px 5px 1px #0003;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  min-width: 290px;
+  overflow: hidden;
+  padding: 12px 22px;
+  text-align: center;
+  vertical-align: top;
+  white-space: pre-line;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.app-logo {
+  width: 50px;
+    height: 50px;
+    padding: 20px;
+    background-color: #ebe4db;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px -5px #4b2d07;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.app-logo img {
+  width: 100%;
+}
+
+.app-logo:hover {
+  transform: scale(1.1);
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.featured-img {
+  flex-grow: 1;
+}
+
+.featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-img {
+  height: 100vh;
+  flex: 0.5 1;
+  width: 60vw;
+}
+
+.content {
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Titillium Web', sans-serif;
+  width: 40%;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

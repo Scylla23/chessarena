@@ -1,0 +1,72 @@
+.game-wrapper {
+    text-align: center;
+    background: rgb(250,250,250);
+    background: radial-gradient(circle, rgba(250,250,250,1) 60%, rgba(239,236,229,1) 100%);
+    height: 100%;
+}
+.game {
+    color: black;
+    position: relative;
+    display: inline-flex;
+    padding: 1rem 1rem 2rem 2rem;
+}
+ul.board-info {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.board-info.board-left {
+    left: 0;
+    height: 100%;
+    flex-direction: column-reverse;
+    max-height: calc(100vh * 0.85);
+}
+ul.board-info.board-left > li {
+    color: black;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul.board-info.board-top {
+    right: 1rem;
+    width: 100%;
+    top: 0;
+    color: black;
+    max-width: calc(100vh * 0.9);;
+}
+ul.board-info.board-top > li {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.turnIndicator {
+    padding: 25px 0 15px;
+    color: black;
+}
+
+.turnIndicator span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 10px -5px #000;
+    transition: all 0.2s ease-in-out;
+}
+
+.turnIndicator.t-black span {
+    background-color: black;
+    color: white;
+}
+
+.turnIndicator.t-white span {
+    background-color: white;
+    color: black;
+}
+.btn{
+    margin: 1cm;
+}
