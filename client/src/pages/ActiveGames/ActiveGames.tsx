@@ -6,14 +6,17 @@ const AllGames = () => {
   const data = useLoaderData(); //data from the api call
 
   return ( 
-    data ? <div
-      style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-    >
-      
-      {data.map((room) => (
-        <Room key={room.roomId} room={room} />
-      ))}
-    </div> : <>No Active Games Found</>
+    Array.isArray(data) ? (
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
+        {data.map((room) => (
+          <Room key={room.roomId} room={room} />
+        ))}
+      </div>
+    ) : (
+      <>No Active Games Found</>
+    )
   );
 };
 
