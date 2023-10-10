@@ -6,7 +6,7 @@ import { Chess } from "chess.js";
  * @returns [boolean, string]
  */
 
-export const gameOver = (chess: Chess) => {
+export const gameOver = (chess: Chess): [boolean, string] => {
 
     if (!chess.isGameOver()) {
         return [false, ''];
@@ -27,4 +27,5 @@ export const gameOver = (chess: Chess) => {
     if (chess.isDraw()) {
         return [true, 'draw'];
     }
+    return  [false, ''];
 };

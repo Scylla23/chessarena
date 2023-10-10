@@ -19,7 +19,7 @@ const Cell: React.FC<React.PropsWithChildren<CellProps>> = ({ cell, index }) => 
     const isLightBlock = isLightSquare(cell.pos, index);
 
     // Check if the cell's position is in the list of possible moves
-    const isPossibleMove = possibleMoves.includes(cell.pos);
+    const isPossibleMove = possibleMoves !== undefined && possibleMoves.includes(cell.pos);
     
     // Determine the  color if Uppercase then its W and B otherwise
     const color = cell.piece.toUpperCase() === cell.piece ? 'w' : 'b';
@@ -31,7 +31,8 @@ const Cell: React.FC<React.PropsWithChildren<CellProps>> = ({ cell, index }) => 
     };
 
     const handleDrop = () => {
-        dispatch(makeMove({from: selectedCell, to: cell.pos}));
+        
+        dispatch(makeMove({ from: selectedCell as string, to: cell.pos }));
     };
 
     return (

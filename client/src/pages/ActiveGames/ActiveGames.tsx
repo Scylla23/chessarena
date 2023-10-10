@@ -9,6 +9,7 @@ const AllGames = () => {
     data ? <div
       style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
     >
+      
       {data.map((room) => (
         <Room key={room.roomId} room={room} />
       ))}
