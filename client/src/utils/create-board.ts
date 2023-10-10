@@ -43,7 +43,6 @@ export const createBoard = (fenString: string): ICell[] => {
     let pieces: string[] = Array.from(fenPieces);
 
     //adding spaces Number times which represents the empty cells 
-    let currentIndex = 0;
     for (let i = 0; i < pieces.length; i++) {
         const item = pieces[i];
         if (!isNaN(Number(item)) && isFinite(Number(item))) {
@@ -52,7 +51,6 @@ export const createBoard = (fenString: string): ICell[] => {
             for (let j = 0; j < emptySquaresCount; j++) {
                 pieces.splice(i + j, 0, ''); // Insert empty squares
             }
-            currentIndex += emptySquaresCount - 1;
         }
     }
 
