@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       </div>
       <nav className="nav-links">
         <Link to="/games">Active Matches</Link>
-        <NavLink to="https://github.com/Scylla23" target="_blank">Github</NavLink>
+        <NavLink to="https://github.com/Scylla23/chessarena" target="_blank">Github</NavLink>
       </nav>
     </header>
   );
