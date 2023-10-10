@@ -1,10 +1,5 @@
 import { Chess } from "chess.js";
 
-/**
- * 
- * @param chess: An instance of chess current object
- * @returns [boolean, string]
- */
 
 export const gameOver = (chess: Chess) => {
 
