@@ -43,16 +43,13 @@ export const createBoard = (fenString: string): ICell[] => {
     let pieces: string[] = Array.from(fenPieces);
 
     //adding spaces Number times which represents the empty cells 
-    for (let i = 0; i < pieces.length; i++) {
-        const item = pieces[i];
+    pieces.forEach((item, index) => {
         if (!isNaN(Number(item)) && isFinite(Number(item))) {
-            const emptySquaresCount = Number(item);
-            pieces.splice(i, 1); // Remove the number
-            for (let j = 0; j < emptySquaresCount; j++) {
-                pieces.splice(i + j, 0, ''); // Insert empty squares
-            }
+            // pieces.splice(index, 1); // Remove the number
+            // pieces.splice(index, 0, ...new Array(Number(item)).fill(''));
+            pieces.splice(index, 1, range(Number(item)).fill('')); //modify an array by adding, removing, or replacing elements at a specified index
         }
-    }
+    });
 
     // Flatten out the above built array to loop over and generate cells -> 1D
     pieces = pieces.flat();
