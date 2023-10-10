@@ -25,7 +25,7 @@ const Game = () => {
      
       if (roomId != null) {
         try {
-          const response = await axios.get(`http://localhost:3000/api/gamestate/${roomId}`);
+          const response = await axios.get(`https://chessarena.onrender.com/api/gamestate/${roomId}`);
           
           const gameStateData = JSON.parse(response.data.currState);
             //console.log(gameStateData);

@@ -1,6 +1,6 @@
 import { Socket, io } from "socket.io-client";
 
-const URL = 'http://localhost:3000';
+const URL = 'https://chessarena.onrender.com';
 
 export const socket: Socket = io(URL, {
     autoConnect: false

@@ -19,6 +19,6 @@ const AllGames = () => {
 export default AllGames;
 
 export const GameStateLoader = async () => {
-  let res = await axios.get("http://localhost:3000/api/gamestates");
+  let res = await axios.get("https://chessarena.onrender.com/api/gamestates");
   return res.data;
 };
