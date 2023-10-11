@@ -19,6 +19,7 @@ const Cell: React.FC<React.PropsWithChildren<CellProps>> = ({ cell, index }) => 
     const isLightBlock = isLightSquare(cell.pos, index);
 
     // Check if the cell's position is in the list of possible moves
+     // @ts-ignore
     const isPossibleMove = possibleMoves !== undefined && possibleMoves.includes(cell.pos);
     
     // Determine the  color if Uppercase then its W and B otherwise

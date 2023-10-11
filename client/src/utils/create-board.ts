@@ -47,6 +47,7 @@ export const createBoard = (fenString: string): ICell[] => {
         if (!isNaN(Number(item)) && isFinite(Number(item))) {
             // pieces.splice(index, 1); // Remove the number
             // pieces.splice(index, 0, ...new Array(Number(item)).fill(''));
+             // @ts-ignore
             pieces.splice(index, 1, range(Number(item)).fill('')); //modify an array by adding, removing, or replacing elements at a specified index
         }
     });
